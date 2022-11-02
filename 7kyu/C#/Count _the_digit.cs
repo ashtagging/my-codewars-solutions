@@ -23,12 +23,15 @@ namespace CodeWars
     {
         public static int NbDig(int n, int d)
         {
-            var c = 0;
+            var total = 0;
             for (var i = 0; i <= n; i++)
-                if (Math.Pow(i, 2).ToString().Contains(d.ToString())) c += Math.Pow(i, 2).ToString().Count(x => d.ToString().Contains(x));
-
-            return c;
+            {
+              if (Math.Pow(i, 2).ToString().Contains(d.ToString()))
+                {
+                  total += Math.Pow(i, 2).ToString().Count(x => d.ToString().Contains(x));  
+                }
+            }
+            return total;
         }
-
     }
 }
