@@ -5,7 +5,7 @@
 // "Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
 
 function isIsogram(str){
-    var charArray = str.toLowerCase().split("")
-    
+    var charArray = str.toLowerCase().split("");
+
     return charArray.length === new Set(charArray).size;
-  }
+  }  
