@@ -17,6 +17,5 @@ public class Kata
     int totalB = b[0]*b[1]*b[2];
 
     return Math.Abs(totalA - totalB);
-    
   }
 }

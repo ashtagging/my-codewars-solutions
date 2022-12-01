@@ -12,8 +12,12 @@ public class Accumul
 {
 	public static String Accum(string s) 
   {
-     s.ToCharArray.foreach(char c in s){
-       
+     char[] newArray = s.ToCharArray();
+     
+     foreach(char c in newArray){
+       ToUpper(c);
      }
+
+     return newArray;
   }
 }
