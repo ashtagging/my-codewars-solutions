@@ -15,25 +15,16 @@ public static class TimeFormat
       string hs = "";
       string ms = "";
       string ss = "";
-      
-      if(seconds < 60){
-        int sr = seconds % 60;
-        if(seconds < 10){
-          ss = $"0{sr}";
-      } else {
-        ss = $"{sr}";
-      }
-        return $"00:00:{ss}";
-      } else{
-              
-      int hr = seconds % 3600;
-      
+         
       int hours = Convert.ToInt32(seconds/3600);
       if(hours < 10){
         hs = $"0{hours}";
       } else {
         hs = $"{hours}";
       }
+      
+      //Seconds left after hours displayed
+      int hr = seconds % 3600;
       
       int minutes = Convert.ToInt32(hr/60);
       if(minutes < 10){
@@ -42,9 +33,9 @@ public static class TimeFormat
         ms = $"{minutes}";
       }
       
-      int mr = minutes % 60;
-      Console.WriteLine(mr);
-      
+      // Seconds left minutes displayed
+      int mr = hr % 60;
+
       if(mr < 10){
         ss = $"0{mr}";
       } else {
@@ -52,7 +43,5 @@ public static class TimeFormat
       }
       
       return $"{hs}:{ms}:{ss}";
-      }
-
-    }
+  }
 }
