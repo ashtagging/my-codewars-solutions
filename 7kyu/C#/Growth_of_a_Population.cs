@@ -24,12 +24,19 @@
 // Note:
 // Don't forget to convert the percent parameter as a percentage in the body of your function: if the parameter percent is 2 you have to convert it to 0.02.
 
-
 using System;
 
 class Arge {
     
     public static int NbYear(int p0, double percent, int aug, int p) {
-        int population = p0+(p0*(percent/100))+50;
+      
+        int count = 0;
+        int newP0 = p0;
+             
+        while(newP0<p){
+          newP0 = newP0 + aug + (int)(newP0*(percent/100));
+          count++;
+        }
+        return count;
     }
 }
