@@ -23,7 +23,6 @@ public class Kata {
         result.Add(arr[i]);
       }  
     }
-    
     return result.ToArray();
   }
 }
