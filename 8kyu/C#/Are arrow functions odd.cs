@@ -12,3 +12,4 @@ public static class Kata
     values.Where(x => x%2 != 0)
           .ToList();
 }
+
